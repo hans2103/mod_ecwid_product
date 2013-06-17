@@ -1,4 +1,4 @@
-mod_ecwid_product
+Joomla Module Ecwid Product
 =================
 
 The Ecwid Product Module displays one product from your Ecwid shop in Joomla.
@@ -14,4 +14,3 @@ Configuration
 =================
 1. Store ID -> this is the ID of your Ecwid store. This code can be found on your Ecwid dashboard.
 2. Product ID -> this is the ID of your Ecwid product. This code can be found in two places. In the weblink (products=edit#######) and in the tab "HTML code" of a product configuration (productid=#######).
-3. 
