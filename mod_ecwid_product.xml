@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module" version="2.5" client="site" method="upgrade">
+	<name>mod_ecwid_product</name>
+	<author>Hans Kuijpers</author>
+	<creationDate>June 2013</creationDate>
+	<copyright>Copyright (C) 2005 - 2013 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>info@hkweb.nl</authorEmail>
+	<authorUrl>www.hkweb.nl</authorUrl>
+	<version>0.1.0</version>
+	<description>The Ecwid Product module displays one product from your Ecwid shop</description>
+	<files>
+		<filename module="mod_ecwid_product">mod_ecwid_product.php</filename>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_ecwid_product.xml</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_ecwid_product.ini</language>
+		<language tag="en-GB">en-GB.mod_ecwid_product.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+
+			<fieldset 
+				name="basic">
+				<field 
+					default="" 
+					description="ID of the Ecwid store" 
+					label="Store ID" 
+					name="store_id" 
+					type="text"/>
+					
+				<field 
+					default="" 
+					description="ID of a necessary product" 
+					label="Product ID" 
+					name="product_id" 
+					type="text"/>
+
+			</fieldset>
+
+			<fieldset
+				name="advanced">
+
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+
+			</fieldset>
+
+		</fields>
+	</config>
+</extension>
