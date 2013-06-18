@@ -32,10 +32,17 @@ abstract class modEcwidProductHelper
 		$storeid	= $params->get('store_id');
 		$productid	= $params->get('product_id');
 		
-		$URL	= 'http://app.ecwid.com/api/v1/' . $storeid . '/product?id=' . $productid;
+		// get Product data
+		$URLProduct	= 'http://app.ecwid.com/api/v1/' . $storeid . '/product?id=' . $productid;
+		$dataProduct = json_decode(file_get_contents($URLProduct),true);
 		
-		$data = json_decode(file_get_contents($URL));
+		// get Profile data
+		$URLProfile = 'http://app.ecwid.com/api/v1/' . $storeid . '/profile';
+		$dataProfile = json_decode(mb_convert_encoding(file_get_contents($URLProfile),'HTML-ENTITIES','UTF-8'));
 		
+		// combine output
+		$data = (object) array_merge($dataProduct, (array) $dataProfile);
+
         return $data;
         
     }
