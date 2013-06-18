@@ -18,7 +18,7 @@ defined('_JEXEC') or die;
 	</div>
 	<div class="ecwid-product-price">&euro;<?php echo $data->price ?></div>
 	<div class="ecwid-product-add2cart">
-		<script type="text/javascript" src="http://app.ecwid.com/script.js?1322147" charset="utf-8"></script>
+		<script type="text/javascript" src="http://app.ecwid.com/script.js?<?php echo $params->get('store_id') ?>" charset="utf-8"></script>
 		<script type="text/javascript">xAddToBag('productid=<?php echo $params->get('product_id') ?>');</script>
 	</div>
 </div>
