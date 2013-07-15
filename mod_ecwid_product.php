@@ -13,6 +13,8 @@ defined('_JEXEC') or die;
 require_once (dirname(__FILE__).'/helper.php');
 $data = modEcwidProductHelper::build($params);
 
+$moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
+
 // Include the layout-file
 $layout = $params->get('layout', 'default');
 require(JModuleHelper::getLayoutPath('mod_ecwid_product', $layout));
