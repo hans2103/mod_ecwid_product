@@ -29,8 +29,8 @@ abstract class modEcwidProductHelper
      */
     static public function build($params = null)
     {
-        $storeid    = $params->get('store_id');
-        $productid    = $params->get('product_id');
+        $storeid = (int)$params->get('store_id'); 
+        $productid = (int)$params->get('product_id');
         
         // get Product data
         $URLProduct    = 'http://app.ecwid.com/api/v1/' . $storeid . '/product?id=' . $productid;
