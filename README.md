@@ -18,6 +18,7 @@ Configuration
 In real life
 =================
 I always use NoNumber.nl extension 'Modules Anywhere'. When I want to add the image of an Ecwid product to a content item in Joomla I follow the procedure below:
+
 1. Be sure you've installed NoNumber.nl extension 'Modules Anywhere'
 2. Create a new module mod_ecwid_product and assign it to position 'non-position'.
 3. Name the new module 'Ecwid Product Image Only'
