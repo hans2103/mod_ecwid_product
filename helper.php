@@ -2,11 +2,11 @@
 /**
  * Joomla! module Ecwid Product
  *
- * @author     Hans2103 (info@hkweb.nl)
- * @package    mod_ecwid_product
- * @copyright  Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
- * @license    GNU Public License
- * @link       http://www.hkweb.nl
+ * @author Hans2103 (info@hkweb.nl)
+ * @package mod_ecwid_product
+ * @copyright Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
+ * @license GNU Public License
+ * @link http://www.hkweb.nl
  */
 
 // No direct access
@@ -31,9 +31,9 @@ abstract class modEcwidProductHelper
     {
         $storeid = (int)$params->get('store_id'); 
         $productid = (int)$params->get('product_id');
-        
+
         // get Product data
-        $URLProduct = 'http://app.ecwid.com/api/v1/' . $storeid . '/product?id=' . $productid;
+        $URLProduct    = 'http://app.ecwid.com/api/v1/' . $storeid . '/product?id=' . $productid;
         $dataProduct = json_decode(file_get_contents($URLProduct),true);
 
         // get Profile data
