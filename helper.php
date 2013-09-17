@@ -34,11 +34,13 @@ abstract class modEcwidProductHelper
 
         // get Product data
         $URLProduct    = 'http://app.ecwid.com/api/v1/' . $storeid . '/product?id=' . $productid;
-        $dataProduct = json_decode(file_get_contents($URLProduct),true);
+        $contentsProduct = file_get_contents($URLProduct);
+        if(!empty($contentsProduct)) $dataProduct = json_decode($contentsProduct,true);
 
         // get Profile data
         $URLProfile = 'http://app.ecwid.com/api/v1/' . $storeid . '/profile';
-        $dataProfile = json_decode(mb_convert_encoding(file_get_contents($URLProfile),'HTML-ENTITIES','UTF-8'));
+        $contentsProfile = file_get_contents($URLProfile);
+        if(!empty($contentsProfile)) $dataProfile = json_decode(mb_convert_encoding($contentsProfile,'HTML-ENTITIES','UTF-8'));
 
         // combine output
         $data = (object) array_merge($dataProduct, (array) $dataProfile);
