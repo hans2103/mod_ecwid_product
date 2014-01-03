@@ -25,3 +25,5 @@ I always use NoNumber.nl extension 'Modules Anywhere'. When I want to add the im
 4. Change the alternative layout to 'image only'
 5. Open the content item and use Modules Anywhere to call the module using the following code: {module Ecwid Product Image Only|product_id=26352046}
 6. With Modules Anywhere you can override parameters... I did an override on Ecwid product ID.
+
+[![Analytics](https://ga-beacon.appspot.com/UA-2000642-17/mod_ecwid_product/readme)](https://github.com/igrigorik/ga-beacon)
