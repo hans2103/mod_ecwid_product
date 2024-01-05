@@ -1,0 +1,31 @@
+repo_name: hans2103/mod_ecwid_product
+report_id: 1147aa9377c8088b06e24458a55d0ad4
+version: 0.1
+repo_type: Public
+timestamp: '2024-01-05T09:23:22+00:00'
+requested_by: hans2103
+provider: github
+branch: master
+detected_tools_count: 2
+tools:
+- name: PHP
+  description: A popular general-purpose scripting language that is especially suited
+    to web development
+  website_url: http://www.php.net/
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/991/hwUcGZ41_400x400.jpg
+  detection_source_url: https://github.com/hans2103/mod_ecwid_product
+  detection_source: Repo Metadata
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/hans2103/mod_ecwid_product
+  detection_source: Repo Metadata
